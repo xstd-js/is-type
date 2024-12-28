@@ -1,5 +1,5 @@
-import { isNullish } from './nullish/is-nullish.js';
+import { isObject } from './is-object.js';
 
 export function isAsyncDisposable(value: any): value is AsyncDisposable {
-  return !isNullish(value) && Symbol.asyncDispose in value;
+  return isObject(value) && Symbol.asyncDispose in value;
 }
