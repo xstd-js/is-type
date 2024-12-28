@@ -1,5 +1,5 @@
-import { isNullish } from './is-nullish.js';
+import { isObject } from './is-object.js';
 
 export function isDisposable(value: any): value is Disposable {
-  return !isNullish(value) && Symbol.dispose in value;
+  return isObject(value) && Symbol.dispose in value;
 }

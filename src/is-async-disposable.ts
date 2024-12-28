@@ -1,4 +1,4 @@
-import { isNullish } from './is-nullish.js';
+import { isNullish } from './nullish/is-nullish.js';
 
 export function isAsyncDisposable(value: any): value is AsyncDisposable {
   return !isNullish(value) && Symbol.asyncDispose in value;
